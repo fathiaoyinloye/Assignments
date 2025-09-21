@@ -9,18 +9,20 @@
 		double number1 = input.nextDouble();
  		double number2 = input.nextDouble(); 
  		double number3 = input.nextDouble(); 
-      		System.out.println("Maximum is: " + result );
+      	
+		double maximumValue = number1;
 
-		if (y > maximumValue) {                                     
-      maximumValue = y;                                        
-   }                                                           
+		if (number2 > maximumValue) {                                   
+			 maximumValue = number2;                                        
+   		}                                                           
          
-   if (z > maximumValue) {                                     
-      maximumValue = z;                                        
-   }                                                           
+   		if (number3 > maximumValue) {                                     
+      			maximumValue = number3;                                        
+   		}   
+	
+		System.out.println("Maximum is: " + maximumValue );                                                        
                                                                
-   return maximumValue;                                        
-}                
+               
 	} 
 }      
                                                 

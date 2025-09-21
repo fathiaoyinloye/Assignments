@@ -5,11 +5,11 @@
 	count should iterate as far as it is less than terms
 	count should increase by one
 	create a new variable factorial which is equal to one
-	another variable counter should beequal tocount 
+	another variable counter should beequal to count 
 	it should continue iterating as far as it is greater or equals to one
 	count should decrease by one
 	multiplty counter by factorial which will be reassign to factorial
-	e shuld be equal to e plus one divided by the factorial
+	e should be equal to e plus one divided by the factorial
 										*/
 
 
@@ -29,10 +29,12 @@ public class FactorialB{
 			int factorial = 1;
 			for(int counter = count; counter >= 1; counter--){
 				factorial = factorial * counter;
-
+				
 			}
+			System.out.println(factorial);
 
-			e = (e + 1) / factorial;
+			e = e +  (1/ factorial);
+			
 		}
 		
 			System.out.println(e);
