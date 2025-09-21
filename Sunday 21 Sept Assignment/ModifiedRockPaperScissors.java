@@ -40,8 +40,8 @@ public class ModifiedRockPaperScissors{
 
 		System.out.print("Enter a number between 0 - 2: ");
 		int number = scanner.nextInt();
-		
-		
+		 
+		while(computer != number){
 		if(computer == 0 && number == 0){
 			System.out.println("Computer entered: " + computer);
 			System.out.println("The computer is scissors, You are scissor its a draw");
@@ -83,7 +83,7 @@ public class ModifiedRockPaperScissors{
 			System.out.println("Invalid input, please input number between 0 - 2");
 		}
 
-
+		}
 	}
 
 }
