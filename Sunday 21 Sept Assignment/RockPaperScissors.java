@@ -38,6 +38,9 @@ public class RockPaperScissors{
 
 		int computer = random.nextInt(0, 3);
 
+		System.out.println("You are about to play a game of rock, paper, scissors.");
+		System.out.println("scissors = 0 	rock = 1	paper = 2");
+
 		System.out.print("Enter a number between 0 - 2: ");
 		int number = scanner.nextInt();
 		
