@@ -19,7 +19,7 @@ public class OccurrenceCount{
 		int number = 0;
 		int largest = number;
 		int largestCount = 0;
-		int sum = 0;
+		
 		for(int count = 0; count < 5; count++){
 			System.out.print("Enter a number: ");
 			number = scanner.nextInt();
