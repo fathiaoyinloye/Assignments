@@ -8,10 +8,10 @@ public class Analysis {
 		int passes = 0;                          
 		int failures = 0;                        
 		int studentCounter = 1;
-		
+	while(result == 1 || result == 2){
 		while (studentCounter <= 10) {
 			int result = 1;
-			while(result == 1 || result == 2){
+			
 			System.out.print("Enter result (1 = pass, 2 = fail): ");
 			 result = input.nextInt(); 
     			

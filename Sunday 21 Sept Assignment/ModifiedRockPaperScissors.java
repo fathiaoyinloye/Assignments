@@ -44,7 +44,7 @@ public class ModifiedRockPaperScissors{
 		//while(computer != number){
 		int userScore = 0;
 		int computerScore = 0;
-		while(computerScore < 3 || userScore < 3){
+		while(computerScore != 2 || userScore != 2){
 			if(computer == 0 && number == 0){
 				System.out.println("Computer entered: " + computer);
 				System.out.println("The computer is scissors, You are scissor its a draw");
