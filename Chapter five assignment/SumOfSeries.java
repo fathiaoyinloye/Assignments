@@ -19,7 +19,7 @@ public class SumOfSeries{
 		Scanner scanner = new Scanner(System.in);
 		
 		int sum = 0;
-		System.out.print("Enter the number terms a number should be counted: ");
+		System.out.print("Enter the number terms a number should be counted which should not be more than 100: ");
 		long number = scanner.nextLong();
 
 		System.out.println("Number\t\tSum of Numbers");

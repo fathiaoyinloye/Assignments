@@ -21,13 +21,17 @@ public class ModifiedNokia{
 		11 -> Clock
 		12 -> Profiles
 		13 -> Sim settings
+		0 -> to exit
+
 
 """;
-
+		boolean menuForward = true;
+		while(menuForward){
 		System.out.println(menuDisplay);
 		System.out.print("Choose from the above menu: ");
 		int menuChoice = scanner.nextInt();
-	
+				
+		
 		switch(menuChoice){
 		case 1 -> {String phonebook = """
 			
@@ -42,11 +46,16 @@ public class ModifiedNokia{
 			8 -> Options
 			9 -> Speed dials
 			10 -> Voice tag
+			0 -> Go back to previous menu
 
 
 		""";
+			boolean phoneBookGoing = true;
+			while(phoneBookGoing){
 			System.out.println(phonebook);
-			System.out.println("Choose from the phonebook dropdown menu: ");
+			
+			
+			System.out.print("Choose from the phonebook dropdown menu: ");
 			int phonebookmenu = scanner.nextInt();
 			switch(phonebookmenu){
 
@@ -61,8 +70,12 @@ public class ModifiedNokia{
 					   Options
 					1 -> Type of View
 					2 -> Memory Status
+					0 -> Go back to previous menu
+
 
 					""";
+					boolean optionsGoing = true;
+					while(optionsGoing){
 
 					System.out.print(options);
 					System.out.println("Choose from the options dropdown menu: ");
@@ -71,15 +84,18 @@ public class ModifiedNokia{
 					switch(optionsMenu){
 					case 1 -> {System.out.print("Type of View");}
 					case 2 -> {System.out.print("Memory Status");}
+					case 0 -> optionsGoing = false;
+					}
 					}
 
 				}
 			case 9 -> {System.out.print("Speed dials");}
 			case 10 -> {System.out.print("Voice tags");}
-
+			case 0 -> phoneBookGoing = false;
+			}
 			}
 		}
-
+//}
 		case 2 -> {String messages = """
 			Messages
 			1 -> Write messages
@@ -92,8 +108,12 @@ public class ModifiedNokia{
 			8 -> Info service
 			9 -> Voice mailbox number
 			10 -> Service command editor
+			0 -> Go back to previous menu
+
 
 			""";
+			boolean messagesGoing = true;
+			while(messagesGoing){
 			System.out.println(messages);
 			System.out.print("Choose from the above Messages dropdown menu: ");
 			int messagesMenu = scanner.nextInt();
@@ -106,9 +126,13 @@ public class ModifiedNokia{
 			case 6 -> {System.out.print("Smileys");}
 			case 7 -> { String messageSetting = """
 					Messages Setting
-					1 -> Write messages
-					2 -> Inbox
+					1 -> Set 1
+					2 -> Common
+					0 -> Go back to previous menu
+
 				""";
+				boolean messageSettingGoing = true;
+				while(messageSettingGoing){
 				System.out.print(messageSetting);
 				System.out.print("Choose from the above Message Setting dropdown menu: ");
 				int messageSettingMenu = scanner.nextInt();
@@ -118,7 +142,11 @@ public class ModifiedNokia{
 					1 -> Message center number
 					2 -> Messages sent as
 					3 -> Message validity
-					""";	
+					0 -> Go back to previous menu
+
+					""";
+					boolean set1Going = true;
+					while (set1Going){
 					System.out.println(set1);
 					System.out.println("Choose from the above Set 1 menu: ");
 					int set1Menu = scanner.nextInt();
@@ -126,14 +154,19 @@ public class ModifiedNokia{
 					case 1 -> {System.out.print("Message center number");}
 					case 2 -> {System.out.print("Messages sent as");}
 					case 3 -> {System.out.print("Message validity");}
+					case 0 -> set1Going = false;
 					}
+				}
 				}
 				case 2 -> { String common = """
 					Common
 					1 -> Delivery report
 					2 -> Reply via same centre
 					3 -> Character support
+					0 -> Go back to previous menu
 					""";	
+					boolean commonForward = true;
+					while(commonForward){
 					System.out.println(common);
 					System.out.println("Choose from the above Common menu: ");
 					int commonMenu = scanner.nextInt();
@@ -141,16 +174,20 @@ public class ModifiedNokia{
 					case 1 -> {System.out.print("Delivery report");}
 					case 2 -> {System.out.print("Reply via same centre");}
 					case 3 -> {System.out.print("Character support");}
+					case 0 -> commonForward = false;
+					}
 					}
 				}
-
-
+				case 0 -> messageSettingGoing = false;
+				}
 				}
 
 			}
 			case 8 -> {System.out.print("Info Service");}
 			case 9 -> {System.out.print("Voice mailbox number");}
 			case 10 -> {System.out.print("Service command editor");}
+			case 0 -> messagesGoing = false;
+			}
 				
 			}
 			
@@ -166,8 +203,11 @@ public class ModifiedNokia{
 			6 -> Show call costs
 			7 -> Call cost settings
 			8 -> Prepaid credit
-		
+			0 -> Go back to previous menu
+
 			""";
+			boolean callRegisterGoing = true;
+			while(callRegisterGoing){
 			System.out.println(callRegister);
 			System.out.print("Choose from the above Call Register dropdown menu: ");
 			int callRegisterMenu = scanner.nextInt();
@@ -183,8 +223,11 @@ public class ModifiedNokia{
 						3 -> Recieved call's duration
 						4 -> Dialed call duration
 						5 -> Clear timers
+						0 -> Go back to previous menu
+
 				""";
-						
+					boolean callDurationGoing = true;
+					while(callDurationGoing){
 					System.out.println(showCallDuration);
 					System.out.print("Choose from the above Show call duration dropdown menu: ");
 					int showCallDurationMenu = scanner.nextInt();
@@ -194,6 +237,8 @@ public class ModifiedNokia{
 						case 3 -> {System.out.print("Recieved call's duration");}
 						case 4 -> {System.out.print("Dialed call duration");}
 						case 5 -> {System.out.print("Clear timers");}
+						case 0 -> callDurationGoing = false;
+					}	
 
 
 					}
@@ -202,8 +247,13 @@ public class ModifiedNokia{
 				case 6 -> {String showCallCosts = """
 						Show call costs
 						1 -> Last call cost
-						2 -> All call's cost										3 -> Clear counters
+						2 -> All call's cost
+						3 -> Clear counters
+						0 -> Go back to previous menu
+
 				""";
+				boolean showCallCostGoing = true;
+				while(showCallCostGoing){
 				System.out.println(showCallCosts);
 				System.out.print("Choose from the above Show call Costs dropdown menu: ");
 				int showCallCostsMenu = scanner.nextInt();
@@ -211,6 +261,8 @@ public class ModifiedNokia{
 				case 1 -> {System.out.print("Last call cost");}
 				case 2 -> {System.out.print("All call's cost");}
 				case 3 -> {System.out.print("Clear counters");}
+				case 0 -> showCallCostGoing = false;
+				}
 				}
 
 
@@ -218,17 +270,26 @@ public class ModifiedNokia{
 				case 7 -> {String callCostSettings = """
 						Call cost settings
 						1 -> call cost limit
-						2 -> Show costs in								""";
+						2 -> Show costs in
+						0 -> Go back to previous menu
+
+								""";
+					boolean callCostSettingsGoing = true;
+					while(callCostSettingsGoing){
 					System.out.println(callCostSettings);
 					System.out.print("Choose from the above Call cost settings dropdown menu: ");
 				int callCostSettingsMenu = scanner.nextInt();
 				switch(callCostSettingsMenu){
 				case 1 -> {System.out.print("Call cost limit");}
 				case 2 -> {System.out.print("Show costs in");}
+				case 0 -> callCostSettingsGoing = false;
+				}
 				}
 
 				}
 				case 8 -> {System.out.print(" Prepaid credit");}
+				case 0 -> callRegisterGoing = false;
+			}
 
 			}
 			
@@ -245,9 +306,12 @@ public class ModifiedNokia{
 			7 -> Warning and game tones
 			8 -> Vibrating alert
 			9 -> Screen saver
+			0 -> Go back to previous menu
+
 
 			""";
-
+			boolean tonesGoing = true;
+			while(tonesGoing){
 			System.out.print(tones);
 			System.out.print("Choose from the above Tones dropdown menu: ");
 			int toneMenu = scanner.nextInt();
@@ -261,6 +325,8 @@ public class ModifiedNokia{
 			case 7 -> {System.out.print("Warning and game tones");}
 			case 8 -> {System.out.print("Vibrating alert");}
 			case 9 -> {System.out.print("Screen saver");}
+			case 0 -> tonesGoing = false;
+			}
 				
 			}
 		}
@@ -271,9 +337,11 @@ public class ModifiedNokia{
 			2 -> Phone settings
 			3 -> Security settings
 			4 -> Restore Factory Settings
-			
-			""";
+			0 -> Go back to previous menu
 
+			""";
+			boolean settingGoing = true;
+			while(settingGoing){
 			System.out.print(settings);
 			System.out.print("Choose from the above Settings dropdown menu: ");
 			int settingsMenu = scanner.nextInt();
@@ -287,8 +355,11 @@ public class ModifiedNokia{
 				4 -> Own number sending
 				5 -> Phone line in use
 				6 -> Automatic answer
-			""";
+				0 -> Go back to previous menu
 
+			""";
+				boolean callSettingGoing = true;
+				while(callSettingGoing){
 				System.out.print(callSetting);
 				System.out.print("Choose from the above Call settings dropdown menu: ");
 				int callSettingMenu = scanner.nextInt();
@@ -300,6 +371,8 @@ public class ModifiedNokia{
 				case 4 -> {System.out.print("Own number sending");}
 				case 5 -> {System.out.print("Phone line in use");}
 				case 6 -> {System.out.print("Automatic answer");}
+				case 0 -> callSettingGoing = false;
+				}
 
 				}
 
@@ -313,8 +386,11 @@ public class ModifiedNokia{
 				4 -> Network selection
 				5 -> Lights
 				6 -> Confirm SIM service actions
-			""";
+				0 -> Go back to previous menu
 
+			""";
+				boolean phoneSettingGoing = true;
+				while(phoneSettingGoing){
 				System.out.print(phoneSetting);
 				System.out.print("Choose from the above Phone settings dropdown menu: ");
 				int phoneSettingMenu = scanner.nextInt();
@@ -326,6 +402,8 @@ public class ModifiedNokia{
 				case 4 -> {System.out.print("Network selection");}
 				case 5 -> {System.out.print("Lights");}
 				case 6 -> {System.out.print("Confirm SIM service actions");}
+				case 0 -> phoneSettingGoing = false;
+				}
 
 				}
 			}
@@ -337,8 +415,12 @@ public class ModifiedNokia{
 				4 -> Closed user group
 				5 -> Phone security
 				6 -> Change access codes
+				0 -> Go back to previous menu
+
 			""";
 
+				boolean securitySettingGoing = true;
+				while(securitySettingGoing){
 				System.out.print(securitySetting);
 				System.out.print("Choose from the above Security settings dropdown menu: ");
 				int securitySettingMenu = scanner.nextInt();
@@ -350,12 +432,16 @@ public class ModifiedNokia{
 				case 4 -> {System.out.print("Closed user group");}
 				case 5 -> {System.out.print("Phone security");}
 				case 6 -> {System.out.print("Change access codes");}
+				case 0 -> securitySettingGoing = false;
+				}
 
 				}
 
 			}
 
-			case 4 -> {System.out.print("Restore Factory Settings");}				
+			case 4 -> {System.out.print("Restore Factory Settings");}
+			case 0 -> settingGoing = false;
+			}				
 			}
 		}
 
@@ -371,9 +457,11 @@ public class ModifiedNokia{
 			4 -> Stopwatch
 			5 -> Countdown timer
 			6 -> Auto update of date and time
-			
-			""";
+			0 -> Go back to previous menu
 
+			""";
+			boolean clockGoing = true;
+			while(clockGoing){
 			System.out.print(clock);
 			System.out.print("Choose from the above Clock dropdown menu: ");
 			int clockMenu = scanner.nextInt();
@@ -383,19 +471,21 @@ public class ModifiedNokia{
 			case 3 -> {System.out.print(" Date setting");}
 			case 4 -> {System.out.print("Stopwatch");}
 			case 5 -> {System.out.print("Countdown timer");}
-			case 6 -> {System.out.print("Auto update of date and time");}		
+			case 6 -> {System.out.print("Auto update of date and time");}
+			case 0 -> clockGoing = false;
+			}		
 			}
 		}
 
 		case 12 -> {System.out.print("Profiles");}
 		case 13 -> {System.out.print("Sim services");}
-
+		case 0 -> menuForward = false;
 
 
 
 
 		}
-		
+		}		
 
 
 	}

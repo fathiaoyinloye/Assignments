@@ -11,7 +11,9 @@
 	its assumed that the first number inputed is equal to largest and also smallest
 	if there is any number that is greater than the number, it should take the place of the largest
 		if there is any number that is smaller than the number, it should take the place of the smallest
+		sum up the largest and smallest and save it in a container sum
 Print largest and smallest
+print the sum of largest and smallest
 
 
 
@@ -44,12 +46,13 @@ public class MinimumMaximum{
 				if(number < smallest){
 					smallest = number;
 				}
-
-
+		
+			
 		}
+			int sum = largest + smallest
 			System.out.println("The largest of all the inputed number is " +largest);
 			System.out.println("The smallest of all the inputed number is " +smallest);
-
+			System.out.println("The sum of largest and smallest number is " +sum);
 
 
 
