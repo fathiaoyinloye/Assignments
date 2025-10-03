@@ -192,24 +192,7 @@ public class ModifiedNokia{
 			}
 			
 		}
-		case 3 -> { boolean chatgoing = true;
-				while(menuChoice){
-
-			System.out.print("1 -> Chat");
-			System.out.print("0 -> Go back");
-			System.out.print("Enter your option from the dropdown menu");
-			int chatOption = scanner.nextInt();
-
-			switch(chatOption){
-			case 1 -> {System.out.print("Welcome to your chat. This is the end of the chat.");}
-			case 0 -> chatgoing = false;
-
-		}
-
-
-
-
-		}
+		case 3 -> {System.out.print("Chat");}
 		case 4 -> {  String callRegister = """
 			Call Register
 			1 -> Missed calls
