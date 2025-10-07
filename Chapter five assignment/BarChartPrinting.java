@@ -4,7 +4,7 @@ public class BarChartPrinting{
 	public static void main(String[] args){
 
 		Scanner input = new Scanner(System.in);
-		for(int count = 1; count <=6; count++) {
+		for(int count = 1; count <=6; ) {
 				System.out.print("Enter a number from 1 - 30: ");
 				int number = input.nextInt();
 				if(number >= 1 && number <= 30){
@@ -17,9 +17,10 @@ public class BarChartPrinting{
 				for(int counter = 1; counter <= number; counter++) {
 					System.out.print("*");
 
-				}
 
+				}
 		System.out.println();
+
 
 		
 		}

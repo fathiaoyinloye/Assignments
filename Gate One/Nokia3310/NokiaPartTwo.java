@@ -64,7 +64,6 @@ public class NokiaPartTwo{
 						String searchmenu = scanner.next();
   	
 							switch(searchmenu){
-							case "1" -> {System.out.println("Invalid Input, Please go back to previous menu");}
 							case "0" -> {search = false;}
 							default -> {System.out.println("	Invalid Input, Please go back to previous menu");}
 							}
@@ -81,7 +80,6 @@ public class NokiaPartTwo{
 						String serviceNoMenu = scanner.next();
   	
 							switch(serviceNoMenu){
-							case "1" -> {System.out.println("Invalid Input, Please go back to previous menu");}
 							case "0" -> {serviceNos = false;}
 							default -> {System.out.println("	Invalid Input, Please go back to previous menu");}
 							}
