@@ -38,7 +38,7 @@ public class PizzaWahalaTest{
 
 				System.out.print("Enter the number of people eating the Pizza: ");
 				int people = scanner.nextInt();
-				PizzaCalculation.getSapaSize(people);
+				System.out.println(PizzaCalculation.getSapaSize(people));
 
 
 			}
@@ -46,18 +46,18 @@ public class PizzaWahalaTest{
 			case "small money"  -> {
 				System.out.print("Enter the number of people eating the Pizza: ");
 				int people = scanner.nextInt();
-				PizzaCalculation.smallMoneySize(people);
+				System.out.println(PizzaCalculation.smallMoneySize(people));
 
 
 
 
 								}
 
-		case "big boyz"  -> {
+		case "big boys"  -> {
 
 			System.out.print("Enter the number of people eating the Pizza: ");
 			int people = scanner.nextInt();
-			PizzaCalculation.bigMoneySize(people);
+			System.out.println(PizzaCalculation.bigMoneySize(people));
 
 			}
 
@@ -65,7 +65,7 @@ public class PizzaWahalaTest{
 
 			System.out.print("Enter the number of people eating the Pizza: ");
 			int people = scanner.nextInt();
-			PizzaCalculation.odogwuSize(people);
+			System.out.println(PizzaCalculation.odogwuSize(people));
 
 			
 			}

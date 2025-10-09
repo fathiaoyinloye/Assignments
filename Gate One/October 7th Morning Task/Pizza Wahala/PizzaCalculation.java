@@ -1,6 +1,6 @@
 public class PizzaCalculation{
 
-	public static void getSapaSize(int people){
+	public static String getSapaSize(int people){
 		int boxes = people/4;
 		if(people % 4 != 0)
 			boxes = boxes + 1;
@@ -9,17 +9,17 @@ public class PizzaCalculation{
 			int remainder = totalSlice - people;
 			int price = boxes * 2500;
 		
-			
-				System.out.println("The number of boxes is: " + boxes);	
-				System.out.println("The number of remaining slice is: " + remainder);
-				System.out.println("The price of pizza is: " + price);
-	
-	
+		String output = "The number of boxes is: "  + boxes + "\nThe number of remaining slice is: " + remainder + "\nThe price of pizza is: " + price;
+
+
+
+			return output;
+					
 	}
 
 
 
-	public static void smallMoneySize(int people){
+	public static String smallMoneySize(int people){
 		int boxes = people/6;
 		if(people % 6 != 0)
 			boxes = boxes + 1;
@@ -29,14 +29,14 @@ public class PizzaCalculation{
 		int price = boxes * 2900;
 		
 			
-		System.out.println("The number of boxes is: " + boxes);	
-		System.out.println("The number of remaining slice is: " + remainder);
-		System.out.println("The price of pizza is: " + price);
-	
+		String output = "The number of boxes is: "  + boxes + "\nThe number of remaining slice is: " + remainder + "\nThe price of pizza is: " + price;
+
+
+		return output;
 	
 	}
 
-		public static void bigMoneySize(int people){
+		public static String bigMoneySize(int people){
 		int boxes = people/8;
 		if(people % 8 != 0)
 			boxes = boxes + 1;
@@ -46,13 +46,14 @@ public class PizzaCalculation{
 		int price = boxes * 4000;
 		
 			
-		System.out.println("The number of boxes is: " + boxes);	
-		System.out.println("The number of remaining slice is: " + remainder);
-		System.out.println("The price of pizza is: " + price);
-	
+		String output = "The number of boxes is: "  + boxes + "\nThe number of remaining slice is: " + remainder + "\nThe price of pizza is: " + price;
+
+
+		return output;
+
 	
 	}
-	public static void odogwuSize(int people){
+	public static String odogwuSize(int people){
 		int boxes = people/12;
 		if(people % 12 != 0)
 			boxes = boxes + 1;
@@ -62,10 +63,11 @@ public class PizzaCalculation{
 		int price = boxes * 5200;
 		
 			
-		System.out.println("The number of boxes is: " + boxes);	
-		System.out.println("The number of remaining slice is: " + remainder);
-		System.out.println("The price of pizza is: " + price);
-	
+		String output = "The number of boxes is: "  + boxes + "\nThe number of remaining slice is: " + remainder + "\nThe price of pizza is: " + price;
+
+
+		return output;
+
 	
 	}
 
