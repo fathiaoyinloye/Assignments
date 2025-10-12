@@ -97,11 +97,9 @@ public class CupCakes{
 	}
 	
 	public static int getMiddleElement(int[] number ){
-		int count = 0;
-		int middle = 0;
+			int middle = 0;
 		for (int index = 0; index < number.length; index++){
-			count += 1;
-		middle = number[count/2];
+			middle = number[(number.length - 1) /2];
 		
 		
 	}
